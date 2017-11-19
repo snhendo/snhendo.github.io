@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
-
-
-const AppBar1 = () => (
-  <AppBar
-    title="Welcome to Tallr"
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
-  />
-);
+import {grey700} from 'material-ui/styles/colors';
 
 
 class Login extends Component {
@@ -29,17 +22,27 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <AppBar1 />
-        <h3>Log in or Sign up</h3>
+        <AppBar
+          title="Tallr"
+          iconClassNameRight="muidocs-icon-navigation-expand-more"
+          showMenuIconButton={false}
+        />
+        <h3 style={{color: grey700}}>Log in or Sign up</h3>
         <TextField
           floatingLabelText="Username"
         /><br/>
         <TextField
           floatingLabelText="Password"
         /><br/>
-            <RaisedButton label="Log in" primary={true} style={{margin: 12}} />
-            <RaisedButton backgroundColor="#00cc99" labelColor="#fff" label="Sign up" style={{margin:12}} />
-
+            <RaisedButton 
+              label="Log in" 
+              primary={true} 
+              style={{margin: 12}} />
+            <RaisedButton 
+            backgroundColor="#00cc99" 
+            labelColor="#fff" 
+            label="Sign up" 
+            style={{margin:12}} />
       </div>
     );
   }

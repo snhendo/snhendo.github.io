@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
-
-
-const AppBar1 = () => (
-  <AppBar
-    title="Create New Task"
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
-  />
-);
+import AppBarDrawer from './AppBarDrawer';
 
 
 class NewTask extends Component {
@@ -25,37 +17,53 @@ class NewTask extends Component {
     };
   }
 
-
   render() {
     return (
-      <div className="NewTask">
-        <AppBar1 />
-        <TextField
-          floatingLabelText="Title"
-        /><br/>
-        <TextField
-          style={{textAlign: 'left'}}
-          floatingLabelText="Description"
-          multiLine={true}
-          rows={4}
-        /><br />
-        <TextField
-          floatingLabelText="Address"
-        /><br/>
-        <TextField
-          floatingLabelText="Price"
-        /><br/>
-        <RaisedButton 
-          label="Submit"
-          primary={true} 
-          style={{margin: 12}} 
-        />
-        <RaisedButton 
-          backgroundColor="#00cc99" 
-          // labelColor="#fff" 
-          label="Cancel" 
-          style={{margin: 12}} 
-        />
+      <div style={{ textAlign: 'left' }}
+        className="NewTask">
+        <AppBarDrawer />
+        <div style={{width: '85vw', margin: 'auto', maxWidth: '800px'}} >
+          <TextField
+            floatingLabelText="Title"
+            fullWidth={true}
+            //errorText="This field is required"
+          /><br/>
+          <TextField
+            style={{textAlign: 'left'}}
+            floatingLabelText="Description"
+            //errorText="This field is required"
+            multiLine={true}
+            fullWidth={true}
+            rows={4}
+          /><br />
+          <div> 
+            <TextField
+              floatingLabelText="Address"
+              style={{width: '47%', 
+                minWidth: '272px', 
+                display: 'inline-block', 
+                marginRight: '6%'}}
+            /> 
+            <TextField
+              floatingLabelText="Price"
+              style={{width: '47%', minWidth: '272px', display: 'inline-block', }}
+              // errorText="This field is required"
+            /><br/>
+          </div>
+        </div>  
+        <div style={{textAlign: 'center'}}>
+          <RaisedButton 
+            label="Submit"
+            primary={true} 
+            style={{margin: 12}} 
+          />
+          <RaisedButton 
+            backgroundColor="#00cc99" 
+            labelColor="#fff" 
+            label="Cancel" 
+            style={{margin: 12}} 
+          />
+        </div>
       </div>
     );
   }
