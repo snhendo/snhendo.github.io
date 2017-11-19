@@ -37,7 +37,9 @@ class Login extends Component {
             <RaisedButton 
               label="Log in" 
               primary={true} 
-              style={{margin: 12}} />
+              style={{margin: 12}} 
+              href="#/TaskList"
+              />
             <RaisedButton 
             backgroundColor="#00cc99" 
             labelColor="#fff" 

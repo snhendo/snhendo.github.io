@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
+import AppBarDrawer from './AppBarDrawer';
 
 
 class Profile extends Component {
@@ -21,7 +21,7 @@ class Profile extends Component {
   render() {
     return (
       <div className="Profile">
-        <AppBar
+        <AppBarDrawer
           title="Profile"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import AppBarDrawer from './AppBarDrawer';
+import FlatButton from 'material-ui/FlatButton';
 
 
 class TaskList extends Component {
@@ -20,7 +21,7 @@ class TaskList extends Component {
   render() {
     return (
       <div className="NewTask">
-        <AppBarDrawer title='Create New Task'/>
+        <AppBarDrawer title='Task List' iconElementRight={<FlatButton label="New Task" href='#/NewTask'/>}/>
       </div>
     );
   }

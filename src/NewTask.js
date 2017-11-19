@@ -21,7 +21,7 @@ class NewTask extends Component {
     return (
       <div style={{ textAlign: 'left' }}
         className="NewTask">
-        <AppBarDrawer />
+        <AppBarDrawer title='Create New Task'/>
         <div style={{width: '85vw', margin: 'auto', maxWidth: '800px'}} >
           <TextField
             floatingLabelText="Title"

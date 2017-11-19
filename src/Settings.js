@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
+import AppBarDrawer from './AppBarDrawer';
 
 
 class Settings extends Component {
@@ -21,11 +21,10 @@ class Settings extends Component {
   render() {
     return (
       <div className="Settings">
-        <AppBar
+        <AppBarDrawer
           title="Settings"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
-        
       </div>
     );
   }

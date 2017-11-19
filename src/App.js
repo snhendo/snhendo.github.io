@@ -8,6 +8,7 @@ import NewTask from './NewTask';
 import TaskList from './TaskList';
 import Profile from './Profile';
 import Settings from './Settings';
+import {HashRouter as Router, Route} from 'react-router-dom';
 
 const DarkTheme = ({ children }) => (
   <MuiThemeProvider 
@@ -18,20 +19,23 @@ const DarkTheme = ({ children }) => (
 );
 
 
+
+
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <div className="App" 
-          style={{minHeight:'100vh'}}
-        >
-          {/* <Login /> */}
-          <NewTask />
-          {/* <TaskList /> */}
-          {/* <Profile /> */}
-          {/* <Settings /> */}
-        </div>
-      </MuiThemeProvider>
+      <Router>
+        <MuiThemeProvider>
+          <div className="App" 
+            style={{minHeight:'100vh'}}>
+            <Route exact={true} render={()=><Login />} path='/' />
+            <Route render={()=><NewTask />} path='/NewTask' />
+            <Route render={()=><TaskList/>} path='/TaskList' />
+            <Route render={()=><Profile />} path='/Profile' />
+            <Route render={()=><Settings />} path='/Settings' />
+          </div>
+        </MuiThemeProvider>
+      </Router>
     );
   }
 }

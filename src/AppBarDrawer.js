@@ -12,7 +12,6 @@ class AppBarDrawer extends Component {
       // initialize the state
       this.state = {
         open: false,
-        title: 'Title'
       };
     }
   
@@ -23,10 +22,10 @@ class AppBarDrawer extends Component {
   
     render() {
       return (
-        <div className="AppBarDrawer">
+        <div className="AppBarDrawer" style={{textAlign: 'left'}} >
           <AppBar
-            title={this.state.title}
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            title={this.props.title}
+            iconElementRight={this.props.iconElementRight}
             onLeftIconButtonTouchTap={this.handleToggle}
           />
           <Drawer
@@ -35,10 +34,10 @@ class AppBarDrawer extends Component {
             open={this.state.open}
             onRequestChange={(open) => this.setState({open})}
           >
-            <MenuItem onClick={this.handleClose}>Task List</MenuItem>
-            <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-            <MenuItem onClick={this.handleClose}>Settings</MenuItem>
-            <MenuItem onClick={this.handleClose}>Log out</MenuItem>
+            <MenuItem onClick={this.handleClose} href='#/TaskList' >Task List</MenuItem>
+            <MenuItem onClick={this.handleClose} href='#/Profile' >Profile</MenuItem>
+            <MenuItem onClick={this.handleClose} href='#/Settings' >Settings</MenuItem>
+            <MenuItem onClick={this.handleClose} href='#/' >Log out</MenuItem>
           </Drawer>
         </div>
       );
