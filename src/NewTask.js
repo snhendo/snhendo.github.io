@@ -61,7 +61,8 @@ class NewTask extends Component {
             backgroundColor="#00cc99" 
             labelColor="#fff" 
             label="Cancel" 
-            style={{margin: 12}} 
+            style={{margin: 12}}
+            href='#/TaskList' 
           />
         </div>
       </div>
