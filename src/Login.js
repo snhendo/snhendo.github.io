@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
 import {grey700} from 'material-ui/styles/colors';
 import {Tabs, Tab} from 'material-ui/Tabs';
-import SwipeableViews from 'react-swipeable-views';
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
 
 
 
@@ -30,8 +30,8 @@ class Login extends Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
           showMenuIconButton={false}
         />
-        <Tabs>
-          <Tab label='Log In'>
+        <Tabs tabItemContainerStyle={{backgroundColor: grey700}} inkBarStyle={{backgroundColor: '#00cc99'}} >
+          <Tab label='Log In' style={{backgroundColor: grey700}} >
               <div style={{textAlign: 'center'}}>
                 {/* <h3 style={{color: grey700}}>Log in or Sign up</h3> */}
                 <TextField
@@ -48,7 +48,7 @@ class Login extends Component {
                 />
               </div>
             </Tab>
-            <Tab label='Sign Up'>
+            <Tab label='Sign Up' style={{backgroundColor: grey700}}>
               <div style={{textAlign: 'center'}}>
                 <TextField
                   floatingLabelText="Username"
@@ -59,6 +59,18 @@ class Login extends Component {
                 <TextField
                   floatingLabelText="Confirm Password"
                 /><br/>
+                <div style={{maxWidth: '100px', textAlign: 'left', }} >
+                  <RadioButtonGroup name="userType" defaultSelected="Tallr">
+                    <RadioButton
+                      value="Tallr"
+                      label="Tallr"
+                    />
+                    <RadioButton
+                      value="Shortr"
+                      label="Shortr"
+                    />
+                  </RadioButtonGroup>
+                </div>
                 <RaisedButton 
                   backgroundColor="#00cc99" 
                   labelColor="#fff" 

@@ -7,6 +7,8 @@ import NewTask from './NewTask';
 import TaskList from './TaskList';
 import Profile from './Profile';
 import Settings from './Settings';
+import {grey200} from 'material-ui/styles/colors';
+
 
 class App extends Component {
   render() {
@@ -14,10 +16,11 @@ class App extends Component {
       <Router>
         <MuiThemeProvider>
           <div className="App" 
-            style={{minHeight:'100vh'}}>
+            style={{minHeight:'100vh',
+              backgroundColor: grey200}}>
             <Route exact={true} render={()=><Login />} path='/' />
             <Route render={()=><NewTask />} path='/NewTask' />
-            <Route render={()=><TaskList/>} path='/TaskList' />
+            <Route render={()=><TaskList/>} path='/TaskList' /> 
             <Route render={()=><Profile />} path='/Profile' />
             <Route render={()=><Settings />} path='/Settings' />
           </div>
