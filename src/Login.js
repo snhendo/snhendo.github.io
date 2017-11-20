@@ -5,6 +5,7 @@ import AppBar from 'material-ui/AppBar';
 import {grey700} from 'material-ui/styles/colors';
 import {Tabs, Tab} from 'material-ui/Tabs';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import IconButton from 'material-ui/IconButton';
 
 
 
@@ -64,27 +65,22 @@ class Login extends Component {
                   textAlign: 'left', 
                   width: '100vw', 
                   margin: 'auto' }} >
-                  <RadioButtonGroup name="userType" defaultSelected="Tallr">
+                  <RadioButtonGroup 
+                  name="userType" 
+                  defaultSelected="Tallr" >
                     <RadioButton
                       value="Tallr"
                       label="Tallr"
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        width: '47%',
-                        minWidth: '150px',
-                        marginRight: '6%'
-                      }}
+                      // style={{
+                      // }}  
                     />
                     <RadioButton
                       value="Shortr"
                       label="Shortr"
-                      style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        width: '47%',
-                        minWidth: '150px'
-                      }}
+                      // style={{
+                        // marginLeft: '5%',
+                        // width: '45%'
+                      // }}
                     />
                   </RadioButtonGroup>
                 </div>
