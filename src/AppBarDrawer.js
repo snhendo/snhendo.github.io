@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import {grey300} from 'material-ui/styles/colors';
 
 
 class AppBarDrawer extends Component {
@@ -33,6 +34,10 @@ class AppBarDrawer extends Component {
             width={175}
             open={this.state.open}
             onRequestChange={(open) => this.setState({open})}
+            containerStyle={{
+              backgroundColor: grey300,
+              color: '#000'
+            }}
           >
             <MenuItem onClick={this.handleClose} href='#/TaskList' >Task List</MenuItem>
             <MenuItem onClick={this.handleClose} href='#/Profile' >Profile</MenuItem>

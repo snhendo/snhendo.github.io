@@ -49,7 +49,7 @@ class Login extends Component {
               </div>
             </Tab>
             <Tab label='Sign Up' style={{backgroundColor: grey700}}>
-              <div style={{textAlign: 'center'}}>
+              <div style={{textAlign: 'center', }}  >
                 <TextField
                   floatingLabelText="Username"
                 /><br/>
@@ -59,15 +59,32 @@ class Login extends Component {
                 <TextField
                   floatingLabelText="Confirm Password"
                 /><br/>
-                <div style={{maxWidth: '100px', textAlign: 'left', }} >
+                <div style={{
+                  maxWidth: '100px', 
+                  textAlign: 'left', 
+                  width: '100vw', 
+                  margin: 'auto' }} >
                   <RadioButtonGroup name="userType" defaultSelected="Tallr">
                     <RadioButton
                       value="Tallr"
                       label="Tallr"
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        width: '47%',
+                        minWidth: '150px',
+                        marginRight: '6%'
+                      }}
                     />
                     <RadioButton
                       value="Shortr"
                       label="Shortr"
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'row',
+                        width: '47%',
+                        minWidth: '150px'
+                      }}
                     />
                   </RadioButtonGroup>
                 </div>
