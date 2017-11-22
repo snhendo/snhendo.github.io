@@ -22,7 +22,8 @@ class TaskList extends Component {
     this.state = {
       textValue: '', // the current input value in the input tag
       formValue: '',
-      submittedValue: []
+      submittedValue: [],
+      tasks: [],
     };
   }
 

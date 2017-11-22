@@ -3,7 +3,6 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import AppBarDrawer from './AppBarDrawer';
 
-
 class NewTask extends Component {
 
   constructor(props) {

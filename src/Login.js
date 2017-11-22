@@ -16,9 +16,9 @@ class Login extends Component {
     
     // initialize the state
     this.state = {
-      textValue: '', // the current input value in the input tag
-      formValue: '',
-      submittedValue: []
+      username: '', // the current input value in the input tag
+      password: '',
+      users: [],
     };
   }
 

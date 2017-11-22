@@ -5,8 +5,7 @@ import {HashRouter as Router, Route} from 'react-router-dom';
 import Login from './Login';
 import NewTask from './NewTask';
 import TaskList from './TaskList';
-import Profile from './Profile';
-import Settings from './Settings';
+import ProfileSettings from './ProfileSettings';
 import {grey200} from 'material-ui/styles/colors';
 
 
@@ -21,8 +20,7 @@ class App extends Component {
             <Route exact={true} render={()=><Login />} path='/' />
             <Route render={()=><NewTask />} path='/NewTask' />
             <Route render={()=><TaskList/>} path='/TaskList' /> 
-            <Route render={()=><Profile />} path='/Profile' />
-            <Route render={()=><Settings />} path='/Settings' />
+            <Route render={()=><ProfileSettings />} path='/ProfileSettings' />
           </div>
         </MuiThemeProvider>
       </Router>

@@ -15,7 +15,7 @@ const styles = {
 };
 
 
-class Settings extends Component {
+class ProfileSettings extends Component {
 
   constructor(props) {
     super(props); //boilerplate (needed for all class components that have state)
@@ -31,9 +31,9 @@ class Settings extends Component {
 
   render() {
     return (
-      <div className="Settings">
+      <div className="ProfileSettings">
         <AppBarDrawer
-          title="Settings"
+          title="Profile Settings"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
           <div style={styles.root}>
@@ -94,5 +94,5 @@ class Settings extends Component {
   }
 }
 
-export default Settings;
+export default ProfileSettings;
 

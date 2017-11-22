@@ -40,8 +40,7 @@ class AppBarDrawer extends Component {
             }}
           >
             <MenuItem onClick={this.handleClose} href='#/TaskList' >Task List</MenuItem>
-            <MenuItem onClick={this.handleClose} href='#/Profile' >Profile</MenuItem>
-            <MenuItem onClick={this.handleClose} href='#/Settings' >Settings</MenuItem>
+            <MenuItem onClick={this.handleClose} href='#/ProfileSettings' >Profile Settings</MenuItem>
             <MenuItem onClick={this.handleClose} href='#/' >Log out</MenuItem>
           </Drawer>
         </div>
