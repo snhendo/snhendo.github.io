@@ -29,8 +29,7 @@ class Login extends Component {
       password: '',
       passwords: '',
       email: '',
-      users: [],
-      formErrors: {email: '', password: ''},
+      formErrors: {email: '', password: '', passwords: ''},
       emailValid: false,
       passwordValid: false,
       formValid: false,
@@ -102,88 +101,89 @@ class Login extends Component {
             </div>
           </Tab>
           <Tab label='Log In' style={{backgroundColor: grey700}} >
-              <div style={{textAlign: 'center'}}>
-                {/* <h3 style={{color: grey700}}>Log in or Sign up</h3> */}
-                <TextField
-                  floatingLabelText="Email"
-                  name="email"
-                  onChange={this.handleUserInput}
-                  value={this.state.email}
-                /><br/>
-                <TextField
-                  floatingLabelText="Password"
-                  type="password"
-                  name="password"
-                  value={this.state.password}
-                /><br/>
-                <RaisedButton 
-                  label="Log in" 
-                  primary={true} 
-                  style={{margin: 12}} 
-                  href="#/TaskList"
-                  disabled={!this.state.formValid}
-                />
+            <div style={{textAlign: 'center'}}>
+              {/* <h3 style={{color: grey700}}>Log in or Sign up</h3> */}
+              <TextField
+                floatingLabelText="Email"
+                onChange={this.handleUserInput}
+                value={this.state.email}
+                name="email"
+              /><br/>
+              <TextField
+                onChange={this.handleUserInput}
+                value={this.state.password}
+                floatingLabelText="Password"
+                type="password"
+                name="password"
+              /><br/>
+              <RaisedButton 
+                label="Log in" 
+                primary={true} 
+                style={{margin: 12}} 
+                href="#/TaskList"
+                disabled={!this.state.formValid}
+              />
+            </div>
+          </Tab>
+          <Tab label='Sign Up' style={{backgroundColor: grey700}}>
+            <div style={{textAlign:'center'}} > 
+                <FormErrors formErrors={this.state.formErrors} />
+            </div>
+            <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`} 
+              style={{textAlign: 'center', }}  >
+              <TextField
+                floatingLabelText="Email"
+                onChange={this.handleUserInput}
+                value={this.state.email}
+                name="email"
+              /><br/>
+              <TextField
+                onChange={this.handleUserInput}
+                value={this.state.password}
+                floatingLabelText="Password"
+                type="password"
+                name="password"
+              /><br/>
+              <TextField
+                floatingLabelText="Confirm Password"
+                type="password"
+                name="passwords"
+                value={this.state.passwords}
+                onChange={this.handleUserInput}
+              /><br/>
+              <div style={{
+                maxWidth: '100px', 
+                textAlign: 'left', 
+                width: '100vw', 
+                margin: 'auto' }} >
+                <RadioButtonGroup 
+                name="userType" 
+                defaultSelected="Tallr" >
+                  <RadioButton
+                    value="Tallr"
+                    label="Tallr"
+                    // style={{
+                    // }}  
+                  />
+                  <RadioButton
+                    value="Shortr"
+                    label="Shortr"
+                    // style={{
+                      // marginLeft: '5%',
+                      // width: '45%'
+                    // }}
+                  />
+                </RadioButtonGroup>
               </div>
-            </Tab>
-            <Tab label='Sign Up' style={{backgroundColor: grey700}}>
-              <div style={{textAlign:'center'}} > 
-                  <FormErrors formErrors={this.state.formErrors} />
-              </div>
-              <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`} 
-                style={{textAlign: 'center', }}  >
-                <TextField
-                  floatingLabelText="Email"
-                  onChange={this.handleUserInput}
-                  value={this.state.email}
-                  name="email"
-                /><br/>
-                <TextField
-                  onChange={this.handleUserInput}
-                  value={this.state.password}
-                  floatingLabelText="Password"
-                  type="password"
-                  name="password"
-                /><br/>
-                <TextField
-                  floatingLabelText="Confirm Password"
-                  type="password"
-                  name="passwords"
-                  value={this.state.passwords}
-                  onChange={this.handleUserInput}
-                /><br/>
-                <div style={{
-                  maxWidth: '100px', 
-                  textAlign: 'left', 
-                  width: '100vw', 
-                  margin: 'auto' }} >
-                  <RadioButtonGroup 
-                  name="userType" 
-                  defaultSelected="Tallr" >
-                    <RadioButton
-                      value="Tallr"
-                      label="Tallr"
-                      // style={{
-                      // }}  
-                    />
-                    <RadioButton
-                      value="Shortr"
-                      label="Shortr"
-                      // style={{
-                        // marginLeft: '5%',
-                        // width: '45%'
-                      // }}
-                    />
-                  </RadioButtonGroup>
-                </div>
-                <RaisedButton 
-                  backgroundColor="#00cc99" 
-                  labelColor="#fff" 
-                  label="Sign up" 
-                  style={{margin:12}} 
-                  href='#/ProfileSettings' 
-                  disabled={!this.state.formValid}/>
-              </div>
-            </Tab>
+              <RaisedButton 
+                backgroundColor="#00cc99" 
+                labelColor="#fff" 
+                label="Sign up" 
+                style={{margin:12}} 
+                href='#/ProfileSettings' 
+                disabled={!this.state.formValid}/>
+            </div>
+          </Tab>
         </Tabs>
       </div>
     );

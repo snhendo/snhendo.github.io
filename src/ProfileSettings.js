@@ -7,12 +7,12 @@ import Checkbox from 'material-ui/Checkbox';
 import Toggle from 'material-ui/Toggle';
 
 
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-};
+// const styles = {
+//   root: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//   },
+// };
 
 
 class ProfileSettings extends Component {
@@ -36,21 +36,21 @@ class ProfileSettings extends Component {
           title="Profile Settings"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
-          <div style={styles.root}>
+          <div style={{display: 'flex', flexWrap: 'wrap', textAlign: 'left'}}>
             <List>
               <Subheader>General</Subheader>
               <ListItem
                 primaryText="Profile photo"
-                secondaryText="Change your Google+ profile photo"
+                secondaryText="Change your Tallr profile photo"
               />
               <ListItem
-                primaryText="Show your status"
-                secondaryText="Your status is visible to everyone you use with"
+                primaryText="Show your location"
+                secondaryText="Your location is visible to other Tallr users"
               />
             </List>
             <Divider />
             <List>
-              <Subheader>Hangout Notifications</Subheader>
+              <Subheader>Notifications</Subheader>
               <ListItem
                 leftCheckbox={<Checkbox />}
                 primaryText="Notifications"
@@ -61,15 +61,10 @@ class ProfileSettings extends Component {
                 primaryText="Sounds"
                 secondaryText="Hangouts message"
               />
-              <ListItem
-                leftCheckbox={<Checkbox />}
-                primaryText="Video sounds"
-                secondaryText="Hangouts video call"
-              />
             </List>
             <List>
               <ListItem
-                primaryText="When calls and notifications arrive"
+                primaryText="When notifications arrive"
                 secondaryText="Always interrupt"
               />
             </List>
