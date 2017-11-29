@@ -6,6 +6,7 @@ import Login from './Login';
 import NewTask from './NewTask';
 import TaskList from './TaskList';
 import ProfileSettings from './ProfileSettings';
+import Navigate from './Navigate';
 import {grey200} from 'material-ui/styles/colors';
 
 
@@ -15,12 +16,18 @@ class App extends Component {
     super(props)
 
     this.state={
-      tasks: []
+      tasks: [],
+      userType: ''
     }
-    
+
+    this.handleUserType = this.handleUserType.bind(this)
   }   
 
-    
+  handleUserType(e) {
+    this.setState({
+      userType: 'tall'
+    })
+  }
 
 
   render() {
@@ -34,6 +41,7 @@ class App extends Component {
             <Route render={()=><NewTask />} path='/NewTask' />
             <Route render={()=><TaskList/>} path='/TaskList' /> 
             <Route render={()=><ProfileSettings />} path='/ProfileSettings' />
+            <Route render={()=><Navigate handleUserType={this.handleUserType} userType={this.state.userType} />} path='/Navigation'/>
           </div>
         </MuiThemeProvider>
       </Router>

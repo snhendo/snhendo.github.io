@@ -74,7 +74,7 @@ class Login extends Component {
   }
 
   validateForm() {
-    this.setState({formValid: this.state.emailValid && this.state.passwordValid});
+    this.setState({formValid: this.state.emailValid && this.state.passwordValid && this.state.passCheck});
   }
 
   errorClass(error) {
@@ -156,24 +156,23 @@ class Login extends Component {
                 textAlign: 'left', 
                 width: '100vw', 
                 margin: 'auto' }} >
+
                 <RadioButtonGroup 
                 name="userType" 
-                defaultSelected="Tallr" >
+                defaultSelected="tall"
+                onChange={this.props.handleUserType} >
+
                   <RadioButton
-                    value="Tallr"
+                    value="tall"
                     label="Tallr"
-                    // style={{
-                    // }}  
                   />
                   <RadioButton
-                    value="Shortr"
+                    value="short"
                     label="Shortr"
-                    // style={{
-                      // marginLeft: '5%',
-                      // width: '45%'
-                    // }}
                   />
+
                 </RadioButtonGroup>
+                
               </div>
               <RaisedButton 
                 backgroundColor="#00cc99" 

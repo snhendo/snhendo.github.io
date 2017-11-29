@@ -38,7 +38,7 @@ class TaskList extends Component {
 
         <List style={{textAlign: 'left'}} >
 
-            <Subheader>Available Tasks</Subheader>
+            <Subheader>Incomplete Tasks</Subheader>
             <Divider />
             <ListItem
               primaryText="Task Title 1"
@@ -50,13 +50,15 @@ class TaskList extends Component {
                   key={1}
                   primaryText={hipsum1}
                   disabled={true}
-                />,
+                >
+                  <RaisedButton label="Accept Task" primary={true} href='#/Navigation' />
+                </ListItem>
               ]}
             />
             <Divider />
             <ListItem
               primaryText="Task Title 2"
-              secondaryText="$2.57     0.52 miles away"
+              secondaryText="$2.57 0.52 miles away"
               secondaryTextLines={2}
               initiallyOpen={false}
               primaryTogglesNestedList={true}
