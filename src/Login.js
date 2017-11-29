@@ -160,7 +160,9 @@ class Login extends Component {
                 <RadioButtonGroup 
                 name="userType" 
                 defaultSelected="tall"
-                onChange={this.props.handleUserType} >
+                onChange={this.props.handleUserType}
+                // onChange={()=>console.log("words")}
+                 >
 
                   <RadioButton
                     value="tall"

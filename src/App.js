@@ -23,10 +23,12 @@ class App extends Component {
     this.handleUserType = this.handleUserType.bind(this)
   }   
 
-  handleUserType(e) {
+  handleUserType(e, value) {
     this.setState({
-      userType: 'tall'
+      userType: value
+      
     })
+    console.log('words')
   }
 
 
@@ -37,7 +39,7 @@ class App extends Component {
           <div className="App" 
             style={{minHeight:'100vh',
               backgroundColor: grey200}}>
-            <Route exact={true} render={()=><Login />} path='/' />
+            <Route exact={true} render={()=><Login handleUserType={this.handleUserType} />} path='/' />
             <Route render={()=><NewTask />} path='/NewTask' />
             <Route render={()=><TaskList/>} path='/TaskList' /> 
             <Route render={()=><ProfileSettings />} path='/ProfileSettings' />
