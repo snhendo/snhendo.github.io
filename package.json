@@ -2,7 +2,7 @@
   "name": "uber-tall",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://snhendo.github.io/",
+  "homepage" : "http://snhendo.github.io/tallr",
   "dependencies": {
     "material-ui": "^0.19.4",
     "react": "^16.0.0",
