@@ -8,13 +8,6 @@ import Toggle from 'material-ui/Toggle';
 import TextField from 'material-ui/TextField';
 
 
-// const styles = {
-//   root: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//   },
-// };
-
 
 class ProfileSettings extends Component {
 
@@ -42,8 +35,7 @@ class ProfileSettings extends Component {
               <Subheader>General</Subheader>
               <ListItem
                 primaryText="Profile photo"
-                secondaryText="Change your Tallr profile photo"
-              />
+                secondaryText="Change your Tallr profile photo"/>
               <ListItem
                 primaryText="Show your location"
                 secondaryText="Your location may be visible to other Tallr users"

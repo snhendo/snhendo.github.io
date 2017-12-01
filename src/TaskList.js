@@ -47,12 +47,18 @@ class TaskList extends Component {
               primaryTogglesNestedList={true}
               nestedItems={[
                 <ListItem
-                  key={1}
+                  key={0}
                   primaryText={hipsum1}
-                  disabled={true}
-                >
-                  <RaisedButton label="Accept Task" primary={true} href='#/Navigation' />
-                </ListItem>
+                  disabled={true} />,
+                <ListItem key={1} >
+                  <RaisedButton 
+                    // key={2}
+                    label="Accept Task" 
+                    primary={true} 
+                    href='#/Navigation' 
+                    align='right'
+                    style={{marginRight:'10px'}} />  
+                </ListItem>             
               ]}
             />
             <Divider />

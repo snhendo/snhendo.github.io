@@ -2,10 +2,12 @@
   "name": "uber-tall",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://snhendo.github.io/",
   "dependencies": {
     "material-ui": "^0.19.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-images-upload": "^1.1.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "react-swipeable-views": "^0.12.10"
@@ -14,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

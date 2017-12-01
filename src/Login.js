@@ -121,7 +121,7 @@ class Login extends Component {
                 primary={true} 
                 style={{margin: 12}} 
                 href="#/TaskList"
-                disabled={!this.state.formValid}
+                disabled={!(this.state.password.length > 6)}
               />
             </div>
           </Tab>

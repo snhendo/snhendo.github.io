@@ -17,18 +17,19 @@ class App extends Component {
 
     this.state={
       tasks: [],
-      userType: ''
+      userType: '',
+      pictures: []
     }
 
     this.handleUserType = this.handleUserType.bind(this)
   }   
 
+  
   handleUserType(e, value) {
     this.setState({
       userType: value
       
     })
-    console.log('words')
   }
 
 
